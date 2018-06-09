@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<style> 
+			html { 
+				  background: url("sunset.jpg") no-repeat center center fixed; 
+				  -webkit-background-size: cover;
+				  -moz-background-size: cover;
+				  -o-background-size: cover;
+				  background-size: cover;
+			}
+ 
+			
+			table {
+				   border: 2px solid blue;
+				   align:center;
+                   margin:auto;
+				   width: 100%;
+				   border-collapse: collapse;
+				   margin-top: 10px;
+				   table-layout:fixed;
+				   background-color: #ADD8E6;
+
+			}
+				
+			h1.lightSeaGreen { 
+							  color:#20B2AA;
+							  margin:auto;
+			}
+			
+			.blackLetters {
+						   color: black;
+						   font: Impact;
+						   font-size: 16;
+			}
+			
+			button {
+					background-color:#FFD700;
+					color:black;
+					margin:auto;
+					padding: 0px 100px;				 
+					border:2px solid blue;
+					cursor:pointer;
+			}
+			
+			td { 
+			    align:center;
+				margin:auto;
+				border color: 2px solid blue;
+				color:white
+				padding: 0px 1000px;
+				text-align: center;
+				border: 3px solid red;
+			}
+			
+			button:hover {
+						  background-color: #9C96DB;
+			}
+			
+			a {
+			   cursor: pointer;
+			}
+			
+			td:hover { 
+					  text-decoration:2px solid white;
+					  background-color: #FFE4E1;					
+			}
+
+		</style>
+		<script>
+			/*  DO NOT CHANGE
+			 *	the following function is retrieved from http://papermashup.com/read-url-get-variables-withjavascript/
+			 *  
+			 */
+			function getUrlVars() {
+				var vars = {};
+				var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				vars[key] = value;
+				});
+				return vars;
+			}
+			/* END of DO NOT CHANGE */
+			
+			function check(){
+				var q1, q2, q3, q4;
+				
+				q1 = document.quiz.q1.value;
+				q2 = document.quiz.q2.value;
+				q3 = document.quiz.q3.value;
+				q4 = document.quiz.q4.value;
+				
+			
+
+				if(q1 == "19")
+				{
+					document.getElementById("q1").src = "checkmark.jpg"; 
+					document.getElementById("q1").style.alt = "You are correct!";
+					document.getElementById("q1").style.width = "50px";
+					document.getElementById("q1").style.height = "50px";
+				}
+				
+				else
+				{
+					document.getElementById("q1").src = "incorrect.jpg";
+					document.getElementById("q1").style.alt = "You are wrong!";
+					document.getElementById("q1").style.width = "50px";
+					document.getElementById("q1").style.height = "50px";
+				}
+					
+				if(q2 == "St. Louis Blues" || q2 == "blues" || q2 == "Blues")
+				{
+					document.getElementById("q2").src = "checkmark.jpg"; 
+					document.getElementById("q2").style.alt = "You are correct!";
+					document.getElementById("q2").style.width = "50px";
+					document.getElementById("q2").style.height = "50px";
+				}
+				
+				else
+				{
+					document.getElementById("q2").src = "incorrect.jpg";
+					document.getElementById("q2").style.alt = "You are wrong!";
+					document.getElementById("q2").style.width = "50px";
+					document.getElementById("q2").style.height = "50px";
+				}
+				
+				if(q3 == "3")
+				{
+					document.getElementById("q3").src = "checkmark.jpg"; 
+					document.getElementById("q3").style.alt = "You are correct!";
+					document.getElementById("q3").style.width = "50px";
+					document.getElementById("q3").style.height = "50px";
+				}
+				
+				else if(q3 == "1")
+				{
+					document.getElementById("q3").src = "incorrect.jpg";
+					document.getElementById("q3").style.alt = "You are wrong!";
+					document.getElementById("q3").style.width = "50px";
+					document.getElementById("q3").style.height = "50px";
+				}
+				
+				else if(q3 == "2")
+				{
+					document.getElementById("q3").src = "incorrect.jpg";
+					document.getElementById("q3").style.alt = "You are wrong!";
+					document.getElementById("q3").style.width = "50px";
+					document.getElementById("q3").style.height = "50px";
+				}
+				else
+				{
+					document.getElementById("q3").src = "incorrect.jpg";
+					document.getElementById("q3").style.alt = "You are wrong!";
+					document.getElementById("q3").style.width = "50px";
+					document.getElementById("q3").style.height = "50px";
+				}
+				
+				if(q4 == "f")
+				{
+					document.getElementById("q4").src = "checkmark.jpg" ; 
+					document.getElementById("q4").style.alt = "You are correct!";
+					document.getElementById("q4").style.width = "50px";
+					document.getElementById("q4").style.height = "50px";
+				}
+				
+				else
+				{
+					document.getElementById("q4").src = "incorrect.jpg";
+					document.getElementById("q4").style.alt = "You are wrong!";
+					document.getElementById("q4").style.width = "50px";
+					document.getElementById("q4").style.height = "50px";
+				}
+				
+			}
+		</script>
+		<title> Quiz Master </title>
+			<meta name="author" content= "Vedant Shah">
+			<meta name="description" content="Hello! My name is Vedant Shah. This page is the page where I introduce users to the quiz I have created.">
+			<meta name="created" content="May 24, 2017">
+			<meta name="last-modified" content="June 1, 2017">
+	</head>
+	
+			<!-- 
+			Author Name: Vedant Shah
+			File Name: index1.html
+			Date Last Modified: June 1, 2017
+			Date Created: May 24, 2017
+			-->
+	
+		<body style= "margin:auto;">
+			<div style="text-align:center;">
+				<img src="mind1.png" width="998px" height="200px" alt="Vedant Shah's Quiz!">
+			</div>	
+			<table style= "margin:auto; width:90%;">
+				<tr>
+					<td><a href="index.html" style= "color: blue"><img src="home.jpg" width="100" height="100" alt="Home"></a> </td>  
+					<td><a href="login.html" style= "color: blue"><img src="login.jpg" width="100" height="100" alt="Log In"></a> </td>  
+					<td><a href="register.html" style= "color: blue"><img src="register.png" width="100" height="100" alt="Register Now"></a> </td>  
+					<td><a href="tutorials.html" style= "color: blue"><img src="tutorials.jpg" width="100" height="100" alt="Tutorials"></a> </td>  
+					<td><a href="mylife.html" style= "color: blue"><img src="mylife.jpg" width="100" height="100" alt="My Life"></a> </td> 
+				</tr>
+				<tr>
+					<td style="width:40%;"><a href="index.html" style= "color: blue;"><button> Home </button></a></td>  
+					<td><a href="login.html" style= "color: blue;"><button> Log In </button></a></td>  
+					<td><a href="register.html" style= "color: blue;"><button> Register Now </button></a></td>
+					<td><a href="tutorials.html" style= "color: blue;"><button> Tutorials </button></a></td>
+					<td><a href="mylife.html" style= "color: blue;"><button> My Life </button></a></td>  
+				</tr>
+				<tr>
+					<td colspan="5">
+			<!--
+				I have made my quiz on many different topics because I want the quiz to be challenging for the user because if a quiz is easy, there is no enthusiasm in writing it.
+			-->
+						<h1 style="color:purple; font:Impact; margin:auto;"><b> Welcome to Vedant Shah's Quiz! </b></h1>
+						<h3 style="color:blue; font:Impact: margin:auto;"> Hello! My name is Vedant Shah! I am a 15 year-old boy, attending Northview Heights Secondary 
+						School. I am currently in grade 10 and this website was made as this was an assignment for 
+                        my grade 10 ICS (Introduction to Computer Science) class! This is my second website and I hope
+						you check out my first website: <u style="color:red;"> vedant18.000webhostapp.com </u>. This hard quiz will be about me and it 
+						will cover some other topics as well. 
+			<!--
+				"Be prepared and ready to learn" encourages users to study for the quiz and to obtain new knowledge so it can help them in the future. 
+			-->
+						<b><p style="color: #FF4500;"> Be prepared and ready to learn! </p></b>
+						</h3>
+						<form name= "quiz">
+						   <fieldset>
+								<legend style= "font-size:25px; color:purple; font:Impact;">Write the Correct Answer</legend>
+									<ol>
+										<li style="text-align:left; font-size:18px;">What is 9+10-9+10-1?<input type="text" name="q1">.<img id="q1"></img></li>
+										<br>
+										<br>
+										<li style="text-align:left; font-size:18px;">What is the NHL team for the city of St. Louis? <input type="text" name="q2">.<img id="q2"></img></li>
+									</ol>
+						    </fieldset>
+							<fieldset>
+								<legend style= "font-size:25px; color:purple; font:Impact;">Multiple Choice & True and False </legend>
+									<ol>
+										<li style="text-align:left; font-size:18px;"><img src="pinkcity.jpg" width="300" height="300" alt="Pink City"> 
+											<br>
+			<!--
+				"Pink City" is another name for the city of Jaipur because most of the buildings there are pink, hence the name "Pink City". It is located in Rajasthan and it is a very magnificient place as the scenery and castles are extremely beautiful. 
+				I would recommend anyone to go there.
+			-->
+											Also known as the "Pink City", what state is this city in India? (Hint: Look at the image above.) <img id="q3"></img>
+											<br>
+											<label><input type="radio" name="q3" value="1"> Mumbai </label>
+											<label><input type="radio" name="q3" value="2"> Gujarat </label>
+											<label><input type="radio" name="q3" value="3"> Rajasthan </label>
+											<label><input type="radio" name="q3" value="4"> New Delhi </label>
+										</li>
+										<br>
+										<br>
+			<!--
+				The following question was meant to be a trick question because disodium guanylate has a molar mass of 407.19 g/mol. I added an extra "9" to see if people fell for this trick. 
+			-->
+										<li style="text-align:left; font-size:18px;">Is the Molar mass of disodium guanylate 407.199 g/mol? <img id="q4"></img>
+											<label><input type="radio" name="q4" value="t"> True  </label>
+											<label><input type="radio" name="q4" value="f"> False </label>
+										</li>
+									</ol>
+							</fieldset>
+							<button type="button" onclick="check()"> Submit My Answers </button>
+						</form>
+						
+						<p id="feedback"></p>
+						<p>
+							<h3 style="color:blue;">Astronomy is "the branch of science that deals with celestial objects, space, and the physical universe as a whole" (Google). Our galaxy is called the
+							Milky Way galaxy. <h2 style="color:red;"> *Note: You may want to take notes because some of the information below will be tested on the quiz. </h3>
+							<h2 style="color:#4B0082;"> We have 8 planets in our solar system and their names are: </h2> 
+						</p>
+		<!-- 
+			The next table contains information on all 8 planets of the Solar System and there is also a picture. Be sure to obtain all the information if you want to go into the astronomy pathway in life.
+		-->
+				<table>
+					<tr>
+						<td style="color:#CD5C5C;"><font size="16"><b>  Mercury </b></font></td>
+						<td><img src="mercury.jpg" width="200px" height="200px" alt="Mercury"></td> 
+						<td>
+							<ol style="color:#CD5C5C;">
+								<li> Smallest planet in the Solar System </li>
+								<li> Closet planet from the Sun </li>
+								<li> Diameter: 4,880 km </li> 
+								<li> Mass: 3.30 x 10^23kg </li>
+								<li> It takes Mercury about 88 Earth days to orbit around the Sun. </li> 
+								<li> Although Mercury does not have a lot of atmosphere, it has small amounts of oxygen, helium, and oxygen. It has even small 
+									parts of potassium, sodium, calcium, and magnesium. </li>
+							</ol>
+						</td>
+					</tr>
+					<tr>	
+						<td style="color:green;"><font size="16"><b>  Venus </b></font></td>
+						<td><img src="venus.jpg"; width="200px" height="200px" alt="Venus"></td>
+						<td>
+							<ol style="color:green;"> 
+								<li> Third biggest planet in the Solar System </li>
+								<li> Second closest planet from the Sun </li>
+								<li> Temperatures on Venus can reach upto 465 degrees Celsius. </li>
+								<li> Diameter: 4,880 km </li> 
+								<li> Mass: 3.30 x 10^24 kg </li>
+								<li> It takes Venus about 225 Earth days to orbit around the Sun. </li> 
+								<li> It is one of the inner planets and is known as a terrestial planet. </li>
+								<li> Venus consists mainly of carbon dioxide, nitrogen, and small amounts of sulfur dioxide, argon, water, carbon monoxide, helium and neon. </li></td>
+							</ol>
+						</td>
+					</tr>
+					<tr>	
+						<td style="color:red;"><font size="16"><b>  Earth </b></font></td>
+						<td><img src="earthjpg.jpg"; width="200px" height="200px" alt="Earth"></td>
+						<td>
+							<ol style="color:red;"> 
+								<li> Fourth biggest planet in the Solar System </li>
+								<li> Third closest planet from the Sun </li>
+								<li> Diameter: 12,756.3 km </li> 
+								<li> Mass: 5.972 x 10^23 kg </li>
+								<li> It takes Earth about 365 days to orbit around the Sun. </li> 
+								<li> Earth consists mainly of hyrdogen, nitrogen, oxygen, argon, water, and carbon dioxide. </li>
+							</ol>
+						</td>
+					</tr>		
+					<tr>	
+		<!--
+			Mars is my favourite planet because it was like Earth a long time ago and it makes me wonder that could Earth become like Mars as Mars did have liquid water flow and nutrients. 
+			I also like Mars because there because of its bright colours. 
+		-->
+						<td style="color:purple;"><font size="16"><b>  Mars </b></font></td>
+						<td><img src="mars.jpg" width="250px" height="200px" alt="Mars"></td> 
+						<td>
+							<ol style="color:purple;">
+								<li> Seventh biggest planet in the Solar System </li>
+								<li> Fourth closet planet from the Sun. </li> 
+								<li> Diameter: 6,794 km </li>
+								<li> Mass: 6.39 x 10^23 kg </li>
+								<li> It takes Mars about 687 Earth days to orbit around the Sun. </li> 
+								<li> Mars atmosphere consists of carbon dioxide, nitrogen, argon, with small amounts of oxygen and water. </li>
+							</ol>
+						</td>
+					</tr>		
+					<tr>	
+						<td style="color:black;"><font size="16"><b>  Jupiter </b></font></td>
+						<td><img src="jupiter.jpg"; width="200px" height="200px" alt="Jupiter"></td>
+						<td>
+							<ol style="color:black;">
+								<li> Biggest planet in the Solar System </li>
+								<li> Fifth closet planet from the Sun. </li> 
+								<li> Diameter: 139,822 km </li>
+								<li> Mass: 1.898 x 10^27 kg </li>
+								<li> It takes Jupiter about 12 Earth years to orbit around the Sun. </li> 
+								<li> Jupiter atmosphere consists of hydrogen, helium, and small amounts of methane, ammonia, hydrogen sulfide and water. </li>
+							</ol>
+						</td>
+					</tr>						
+					<tr>	
+						<td style="color: blue;"><font size="16"><b> Saturn </b></font></td>
+						<td><img src="saturn.jpg"; width="250px" height="200px" alt="Saturn"></td>
+						<td>
+							<ol style="color: blue;">
+								<li> Second biggest planet in the Solar System </li>
+								<li> Sixth closet planet from the Sun. </li> 
+								<li> Diameter: 116,464 km </li>
+								<li> Mass: 5.683 x 10^26 kg </li>
+								<li> It takes Saturn about 29 Earth years to orbit around the Sun. </li> 
+								<li> Saturn's atmosphere consists of hydrogen, helium, and small amounts of methane and water ice. </li>
+							</ol>
+						</td>
+					</tr>
+					<tr>	
+						<td style="color: black;"><font size="16"><b> Uranus </b></font></td>
+						<td><img src="uranus.jpg"; width="250px" height="200px" alt="Uranus"></td>
+						<td>
+							<ol style="color:black;">
+								<li> Sixth biggest planet in the Solar System </li>
+								<li> Seventh closet planet from the Sun. </li> 
+								<li> Diameter: 50,724 km </li>
+								<li> Mass: 8.681 x 10^25 kg </li>
+								<li> It takes Uranus about 84 Earth years to orbit around the Sun. </li> 
+								<li> Uranus's atmosphere consists of hydrogen, helium, and small amounts of methane, ammonia, and water. </li>
+							</ol>
+						</td>					
+					</tr>		
+					<tr>	
+						<td style="color:#008066;"><font size="16"><b> Neptune </b></font></td>
+						<td><img src="neptune.jpg"; width="225px" height="200px" alt="Neptune"></td>
+						<td>
+							<ol style="color:#008066;">
+								<li> Fifth biggest planet in the Solar System </li>
+								<li> Eigth closet planet from the Sun. </li> 
+								<li> Diameter: 49,244 km </li>
+								<li> Mass: 1.024 x 10^26 kg </li>
+								<li> It takes Neptune about 165 Earth years to orbit around the Sun. </li> 
+								<li> Jupiter's atmosphere consists of hydrogen, helium, and small amounts of water, ammonia and other ices. </li>
+							</ol>
+						</td>
+					</tr>
+				</table> 
+					<p style="color:red;" "font:Impact;"> 
+						<h3 style="color:purple;"> Here is a list of my favorite links that are related to space and astronomy. I hope this will be assistance to you! <br/>
+		<!--
+			Below are links that will take you other websites related to astronomy and will talk about more about it. Make sure you take a look at them.
+		-->
+						Click <a href="https://www.nasa.gov/"style= "color: red"> <b> NASA</b> </a> to go to the homepage of NASA! <br/> 
+						Click <a href="http://www.kidsastronomy.com/" style= "color: green"> <b> Kids Astronomy </b></a> to go to the homepage of Kids Astronomy! <br/> 
+						Click <a href="http://amazingspace.org/" style= "color: blue"> <b> Amazing Space </b></a> to go to the homepage of Aamzing Space! <br/> 
+						Click <a href="https://astronomynow.com/" style= "color: #008066"> <b> Astronomy Now </b> </a> to go to the homepage of Astronomy Now! <br/> 
+							
+						By reading the information presented above, you can tell I am an astronomy enthusiast and I love the topic a lot. However, do not be scared
+						because I will not keep on talking about astronomy and how it is exciting to learn. Have fun! </h3>
+					</p>
+   </body>
+</html>
